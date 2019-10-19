@@ -24,6 +24,7 @@ public class RandomArray {
             if (val > 0 && val % 2 != 0)  result[pos++] = val;
         }
 
+
         return pos == origin.length ? result : Arrays.copyOf(result, pos);
 
     }
