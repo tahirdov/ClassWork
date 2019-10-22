@@ -7,8 +7,15 @@ public class RandomStringer {
         StringBuilder newString = new StringBuilder();
         Random random = new Random();
         for (int i = 1; i <= length; i++) {
-            char ch = (char) ((char) random.nextInt(26) + 'a');
-            newString.append(ch);
+            int num = random.nextInt(3);
+            if (num == 1) {
+                char ch = (char) ((char) random.nextInt(26) + 'a');
+                newString.append(ch);
+            }
+            else {
+                char ch = (char) ((char) random.nextInt(26) + 'A');
+                newString.append(ch);
+            }
         }
         return newString.toString();
     }
