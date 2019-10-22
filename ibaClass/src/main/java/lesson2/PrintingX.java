@@ -1,3 +1,5 @@
+package lesson2;
+
 public class PrintingX {
     public static void main(String[] args) {
         int n = 10;
