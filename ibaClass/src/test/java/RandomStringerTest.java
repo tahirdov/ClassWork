@@ -1,3 +1,4 @@
+import lesson4.RandomStringer;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
