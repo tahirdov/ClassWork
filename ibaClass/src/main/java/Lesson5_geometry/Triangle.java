@@ -1,6 +1,6 @@
 package Lesson5_geometry;
 
-public class Triangle{
+public class Triangle extends AbstractFigure {
     private final Point p1;
     private final Point p2;
     private final Point p3;

@@ -1,6 +1,6 @@
 package Lesson5_geometry;
 
-public class Circle{
+public class Circle extends AbstractFigure{
     private final Point center;
     private final Point rad;
 
