@@ -1,4 +1,4 @@
-package Lesson5;
+package Lesson5.StringWork;
 
 public class Result {
     private final String origin;
@@ -19,23 +19,28 @@ public class Result {
         this.lower_vowels = lower_vowels;
     }
 
-    public String getOrigin() {
+    String getOrigin() {
         return origin;
     }
 
-    public String getUpper_consonants() {
+    String getUpper_consonants() {
         return upper_consonants;
     }
 
-    public String getUpper_vowels() {
+    String getUpper_vowels() {
         return upper_vowels;
     }
 
-    public String getLower_consonants() {
+    String getLower_consonants() {
         return lower_consonants;
     }
 
-    public String getLower_vowels() {
+    String getLower_vowels() {
         return lower_vowels;
     }
+
+    int count(String string, int pos) {
+        return string.length() - string.replaceAll( String.valueOf( pos ), "" ).length();
+    }
+
 }

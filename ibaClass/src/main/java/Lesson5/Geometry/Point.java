@@ -1,6 +1,6 @@
-package Lesson5_geometry;
+package Lesson5.Geometry;
 
-public class Point{
+public class Point {
     private final int x;
     private final int y;
 

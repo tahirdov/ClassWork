@@ -1,6 +1,6 @@
-package Lesson5_geometry;
+package Lesson5.Geometry;
 
-public class Circle extends AbstractFigure{
+public class Circle extends AbstractFigure {
     private final Point center;
     private final Point rad;
 
@@ -9,8 +9,8 @@ public class Circle extends AbstractFigure{
         this.rad = rad;
     }
 
-    public double area () {
+    public double area() {
         return Math.abs( 3.14 * ((center.getX() - rad.getX()) * (center.getY() - rad.getY())) *
-                ((center.getX() - rad.getX()) * (center.getY() - rad.getY())));
+                ((center.getX() - rad.getX()) * (center.getY() - rad.getY())) );
     }
 }

@@ -1,4 +1,4 @@
-package Lesson5_geometry;
+package Lesson5.Geometry;
 
 public class Triangle extends AbstractFigure {
     private final Point p1;
@@ -11,8 +11,8 @@ public class Triangle extends AbstractFigure {
         this.p3 = p3;
     }
 
-    public double area () {
-        return Math.abs((p1.getX()*(p2.getY()-p3.getY()) + p2.getX()*(p3.getY() - p1.getY())
-                + p3.getX()*(p1.getY() - p2.getY()))/2);
+    public double area() {
+        return Math.abs( (p1.getX() * (p2.getY() - p3.getY()) + p2.getX() * (p3.getY() - p1.getY())
+                + p3.getX() * (p1.getY() - p2.getY())) / 2 );
     }
 }

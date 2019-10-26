@@ -1,4 +1,4 @@
-package Lesson5;
+package Lesson5.StringWork;
 
 public class Separators {
     private final String lower_vowels;

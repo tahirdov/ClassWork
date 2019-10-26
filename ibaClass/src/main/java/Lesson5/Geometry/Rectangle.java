@@ -1,4 +1,4 @@
-package Lesson5_geometry;
+package Lesson5.Geometry;
 
 public class Rectangle extends AbstractFigure {
     private final Point p1;
@@ -10,6 +10,6 @@ public class Rectangle extends AbstractFigure {
     }
 
     public int area() {
-       return Math.abs((p1.getX() - p2.getX()) * (p1.getY() - p2.getY()));
-}
+        return Math.abs( (p1.getX() - p2.getX()) * (p1.getY() - p2.getY()) );
+    }
 }
