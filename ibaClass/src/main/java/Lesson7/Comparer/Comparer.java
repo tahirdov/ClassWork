@@ -1,7 +1,6 @@
 package Lesson7.Comparer;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,11 +8,11 @@ import java.util.stream.Stream;
 
 public class Comparer {
 
-    public static boolean isOdd(int val) {
+    private static boolean isOdd(int val) {
         return val %2 != 0;
     }
 
-    public static boolean isEven(int val) {
+    private static boolean isEven(int val) {
         return !isOdd(val);
     }
 
