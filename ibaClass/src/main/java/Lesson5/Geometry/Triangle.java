@@ -6,6 +6,7 @@ public class Triangle extends AbstractFigure {
     private final Point p3;
 
     public Triangle(Point p1, Point p2, Point p3) {
+        super();
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
