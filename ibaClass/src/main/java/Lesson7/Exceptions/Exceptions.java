@@ -1,19 +1,28 @@
 package Lesson7.Exceptions;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Exceptions {
 
-    static int sum (String str) {
-        if (str == null) return 0;
+    static Holder sum (String str) {
+        if (str == null) return new Holder();
+        ArrayList<String> wrong = new ArrayList<>();
         String[] spl = str.split( " " );
-        int total = 0;
+        int num = 0;
+        int unused = 0;
+        int used = 0;
         for (String s : spl) {
             try {
-                total += Integer.parseInt( s );
-            } catch (NumberFormatException ignore) {
+                num = Integer.parseInt( s );
+                used++;
+            } catch (NumberFormatException ex) {
+                unused++;
+                wrong.add( s );
             }
         }
-        return total;
+        return new Holder( used, unused, wrong );
     }
 
 
@@ -22,7 +31,9 @@ public class Exceptions {
         String second = "1 -3 abc"; //return -2
         String third = "1 2 3 abc"; //return 6
         String fourth = "10 2 3"; //return 15
-        System.out.println(sum( second ));
+        System.out.println(sum( second ).getUsed() +" : " + sum( second ).getUnused()
+                                + " : " + sum( second ).getWrong());
+
     }
 
 }
