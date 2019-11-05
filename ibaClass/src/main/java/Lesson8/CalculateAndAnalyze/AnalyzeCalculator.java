@@ -1,4 +1,4 @@
-package Lesson8;
+package Lesson8.CalculateAndAnalyze;
 
 import java.util.ArrayList;
 

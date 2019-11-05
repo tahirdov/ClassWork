@@ -1,4 +1,4 @@
-package Lesson8;
+package Lesson8.CalculateAndAnalyze;
 
 public class Fraction {
     private final int num;
