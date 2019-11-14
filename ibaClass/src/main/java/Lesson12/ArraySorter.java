@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ArraySorter {
 
-    static int[] sortArray(int[] array) {
+    private static int[] sortArray(int[] array) {
         int[] sorted = array.clone();
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
@@ -19,7 +19,7 @@ public class ArraySorter {
         return sorted;
  }
 
-    static int[] gen() {
+    private static int[] gen() {
         Random random = new Random();
         int[] array = new int[25];
 
