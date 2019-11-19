@@ -17,13 +17,13 @@ public class ArraySorter {
             }
         }
         return sorted;
- }
+    }
 
     private static int[] gen() {
         Random random = new Random();
         int[] array = new int[25];
 
-        for (int i = 0; i<25; i++) {
+        for (int i = 0; i < 25; i++) {
             int ran = random.nextInt(41) + 10;
             array[i] = ran;
         }
@@ -33,7 +33,8 @@ public class ArraySorter {
 
     public static void main(String[] args) {
         int[] x = gen();
-        int[] y = sortArray(x);
+        int[] z = x.clone();
+        int[] y = sortArray(z);
         System.out.printf("Unsorted array is: %s\n", Arrays.toString(x));
         System.out.printf("Sorted array is: %s", Arrays.toString(y));
     }

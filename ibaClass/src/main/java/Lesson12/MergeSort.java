@@ -35,8 +35,8 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] first = {4,5,6};
-        int[] second = {1,2,3};
+        int[] first = {4, 5, 6, 8};
+        int[] second = {1, 2, 3};
         int[] merged = merge(first, second);
         System.out.println(Arrays.toString(merged));
 
