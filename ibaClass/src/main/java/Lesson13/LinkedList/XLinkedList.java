@@ -1,13 +1,12 @@
 package Lesson13.LinkedList;
 
-import javax.imageio.plugins.jpeg.JPEGImageReadParam;
 import java.util.StringJoiner;
 
 public class XLinkedList {
 
     private XItem head;
 
-    XItem getHead() {
+    public XItem getHead() {
         return head;
     }
 
@@ -101,6 +100,8 @@ public class XLinkedList {
         XItem(int value) {
             this.value = value;
         }
+
+
     }
 
 }

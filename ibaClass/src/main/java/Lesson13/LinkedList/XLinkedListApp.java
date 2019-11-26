@@ -1,19 +1,24 @@
 package Lesson13.LinkedList;
 
+
 public class XLinkedListApp {
     public static void main(String[] args) {
-        XLinkedList xl = new XLinkedList();
-        xl.add(11);
-        xl.add(22);
-        xl.add(33);
-        xl.add(44);
-
-        boolean b11 = xl.contains(11); // true
-        boolean b12 = xl.contains(12); // false
-        boolean b13 = xl.contains(44);
-
-        System.out.println(xl);
-        System.out.println(xl.length());
+        XLinkedList xl1 = new XLinkedList();
+        xl1.add(11);
+        xl1.add(22);
+        xl1.add(33);
+        xl1.add(44);
+        XLinkedList xl2 = new XLinkedList();
+        xl2.add(2);
+        xl2.add(4);
+        xl2.add(6);
+        xl2.add(10);
+        xl2.add(100);
+        System.out.printf("XL1:%s\n", xl1);
+        System.out.printf("XL2:%s\n", xl2);
+        Merge app = new Merge();
+        XLinkedList.XItem merged = app.merge(xl1.getHead(), xl2.getHead());
+        app.print(merged);
 
     }
 }
