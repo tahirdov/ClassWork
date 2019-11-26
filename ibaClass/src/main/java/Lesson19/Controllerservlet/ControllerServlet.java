@@ -1,4 +1,4 @@
-package Lesson19;
+package Lesson19.Controllerservlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +19,7 @@ public class ControllerServlet extends HttpServlet {
             if (q.contains("hello")) {
                 hi.doGet(req, resp);
             } else if (q.contains("bye")) {
-                bye.doGet(req, resp);
+                bye.doPost(req, resp);
             } else {
                 writer.println("Just smile");
             }

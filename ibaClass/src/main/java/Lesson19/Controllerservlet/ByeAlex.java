@@ -1,4 +1,4 @@
-package Lesson19;
+package Lesson19.Controllerservlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloAlex extends HttpServlet {
+public class ByeAlex extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String q = req.getRequestURI();
         String[] strings = q.split("/");
         try (PrintWriter writer = resp.getWriter()) {
-            writer.println("Hello, " + strings[strings.length - 1]);
+            writer.println("Bye, " + strings[strings.length - 1]);
         }
     }
 }
