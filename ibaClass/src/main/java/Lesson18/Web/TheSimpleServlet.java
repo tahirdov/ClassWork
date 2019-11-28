@@ -10,6 +10,7 @@ public class TheSimpleServlet {
         handler.addServlet(HelloServlet.class, "/hello/*");
         handler.addServlet(HelpServlet.class, "/help/*");
         handler.addServlet(LoginServlet.class, "/login/*");
+        handler.addServlet(HistoryServlet.class, "/calculator/history");
         handler.addServlet(CalculatorServlet.class, "/calculator/*");
         handler.addServlet(FileServlet.class, "/fileread/*");
 //        handler.addServlet(Servlet404.class, "/*");

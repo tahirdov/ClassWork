@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 public class CalculatorServlet extends HttpServlet {
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String sa = req.getParameter("a");
