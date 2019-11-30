@@ -15,6 +15,8 @@ public class DatabaseApp {
         psd.setString(1, "Rose");
         psd.setString(2, "rose@gmail.com");
         psd.execute();
+
+
     }
 
 }
