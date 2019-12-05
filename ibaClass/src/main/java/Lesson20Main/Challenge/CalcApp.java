@@ -1,24 +1,65 @@
 package Lesson20Main.Challenge;
 
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
 
-/**
- * http://localhost:9003/c?op1=33&op2=11&op=minus&id=88
- * http://localhost:9003/c?op1=11&op2=22&op=minus&id=7
- * http://localhost:9003/c?op1=1&op2=2&op=plus&id=9
- */
 public class CalcApp {
-  public static void main(String[] args) throws Exception {
-    Server server = new Server(9003);
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            generate_op();
+        }
+    }
 
-    ServletContextHandler handler = new ServletContextHandler();
-    handler.addServlet(CalculatorServlet.class, "/c/*");
+    private static void generate_op() {
+        int op1 = (int) (Math.random() * 10 + 50);
+        int op2 = (int) (Math.random() * 10 + 50);
+        int id = (int) (Math.random() * 10 + 10);
+        int r = -13;
+        int opCheck = (int) (Math.random() * 10);
+        String ops = "";
+
+        switch (opCheck) {
+            case 0:
+                ops = "plus";
+                break;
+            case 1:
+                ops = "minus";
+                break;
+            case 2:
+                ops = "mult";
+                break;
+            default:
+                ops = "div";
+                break;
+        }
+
+        switch (ops) {
+            case "plus":
+                r = op1 + op2;
+                break;
+            case "minus":
+                r = op1 - op2;
+                break;
+            case "mult":
+                r = op1 * op2;
+                break;
+            case "div":
+                r = op1 / op2;
+                break;
+        }
+        DbOps.insert_op(op1, op2, ops, r, id);
+
+    }
 
 
-
-    server.setHandler(handler);
-    server.start();
-    server.join();
-  }
+//  public static void main(String[] args) throws Exception {
+//    Server server = new Server(9003);
+//
+//    ServletContextHandler handler = new ServletContextHandler();
+//    handler.addServlet(CalculatorServlet.class, "/c/*");
+//
+//
+//
+//    server.setHandler(handler);
+//    server.start();
+//    server.join();
+//  }
 }
